@@ -1,10 +1,14 @@
 #This is simple game programmed by bash script
 
-export PATH=~$PWD:$PATH
+export PATH=$PWD:$PATH
+
+function files {
+number_of_Files=$(ls -a | grep -v "\.$" | wc -l)
+echo $number_of_Files
+}
 
 function game {
-
-numberofFiles=$(ls | wc -l)
+numberofFiles=$(files)
 loop=1
 echo "Guess the number of files in the current directory"
 while [[ $loop -eq 1 ]]
