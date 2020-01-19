@@ -11,8 +11,9 @@ while [[ $loop -eq 1 ]]
 do
 
 read -p "Your guess :" guess
-
-if [[ $guess -eq $numberofFiles ]] 
+if [[ $guess =~ [^0-9] ]]
+then echo "The value you have entered is not a VALID number"
+elif [[ $guess -eq $numberofFiles ]] 
 then
 echo "Bravo! You have guessed exact number of files"
 loop=0
