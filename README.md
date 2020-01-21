@@ -2,6 +2,6 @@
 
 
 
-**Runnig Date and Time of Makefile :** _Mon Jan 20 20:50:00 CET 2020_
+**Runnig Date and Time of Makefile :** _Tue Jan 21 12:21:41 CET 2020_
 
-**The number of lines of guessinggame.sh file :** _      33_ 
+**The number of lines of guessinggame.sh file :** _      31_ 
