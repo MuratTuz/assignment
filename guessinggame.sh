@@ -1,9 +1,7 @@
 #This is simple game programmed by bash script
 
-echo "export PATH=$PWD:$PATH" >>~/.bash_profile
-
 function files {
-    number_of_Files=$(ls -al | grep -v "^d" |  wc -l)
+    number_of_Files=$(find . -maxdepth 1 -type f |  wc -l)
     echo $number_of_Files
 }
 
@@ -16,7 +14,7 @@ function game {
         do
         read -p "Your guess :" guess
         if [[ $guess =~ [^0-9] ]]
-        then echo "The value you have entered is not a VALID number"
+        then echo "The value you have entered is NOT a VALID number"
         elif [[ $guess -eq $numberofFiles ]] 
         then
         echo "Bravo! You have guessed exact number of files"
